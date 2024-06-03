@@ -19,6 +19,7 @@ from django.urls import path
 from inicio.views import myHomeView
 
 urlpatterns = [
+    path('another/<int:year>/', myHomeView, name='Página de inicio'),
     path('', myHomeView, name='Página de inicio'),
     path('admin/', admin.site.urls),
 ]
