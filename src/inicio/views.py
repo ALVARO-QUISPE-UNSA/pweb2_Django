@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def myHomeView(request, *args, **kwargs):
+    dic_get = request.GET
+    print (dic_get)
     print("args: ", args)
     print("kwargs: ", kwargs)
     print(request.user)
