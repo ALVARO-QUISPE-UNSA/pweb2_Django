@@ -10,5 +10,24 @@
   {{request.user}}
   <br>
   {{request.user.is_authenticated}}
+  <h2>Datos del HttpRequest:</h2>
+  <br>
+  <p>El body</p>
+  {{request.body}}
+  <br>
+  <p>scheme</p>
+  {{request.path}}
+  <br>
+  <p>path_info</p>
+  {{request.path_info}}
+  <br>
+  <p>método</p>
+  {{request.method}}
+  <br>
+  <p>diccionario de get</p>
+  {{request.GET}}
+  <br>
+  <p>Todo el request</p>
+  {{request}}
 </body>
 </html>
