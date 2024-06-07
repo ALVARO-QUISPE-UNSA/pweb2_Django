@@ -5,4 +5,5 @@ class Persona(models.Model):
     apellidos = models.TextField()
     edad      = models.IntegerField()
     donador   = models.BooleanField()
+    direccion = models.TextField(max_length=30, null=False, blank=False)
 # Create your models here.
