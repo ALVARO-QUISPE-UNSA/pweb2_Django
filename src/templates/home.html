@@ -6,7 +6,7 @@
 <br>
 {{request.user.is_authenticated}}
 <p>
-{{myText | upper }}
+{{myText | upper | truncatechars:"16"}},
 {{myNumber}}
 </p>
 <ul>
