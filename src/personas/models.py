@@ -4,5 +4,5 @@ class Persona(models.Model):
     nombres   = models.TextField()
     apellidos = models.TextField()
     edad      = models.IntegerField()
-    donador   = models.BooleanField()
+    donador   = models.BooleanField(default=True)
 # Create your models here.
