@@ -8,6 +8,17 @@
   <input type="text" name="q" placeholder="buscar">
   <input type="submit" value="Buscar">
 </form>
+
 {% endif %}
+<h3>Ingrese un comentario</h3>
+<form action="." method="POST"> {% csrf_token %}
+  <input type="text" name="comentario" placeholder="Comenta">
+  <input type="submit" value="Buscar">
+</form>
+<ul>
+{% for c in comentarios %}
+<li>{{c}}</li>
+{% endfor }
+</ul>
 
 {% endblock %}
