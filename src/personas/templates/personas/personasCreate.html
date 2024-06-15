@@ -2,6 +2,7 @@
 {% block content %}
 {% if llenado %}
 <span>Se llenó el formulario con exito</span>
+<p>Desde que se inició el servidor se llenó: {{ contador }}</p>
 {% else %}
 <form action="." method="POST"> {% csrf_token %}
   <input type="text" name="q" placeholder="buscar">

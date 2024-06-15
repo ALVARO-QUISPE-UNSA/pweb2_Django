@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Persona
 from .forms import PersonaForm
 
+contador = 0
 def personaTestView(request):
     obj = Persona.objects.get(id=1)
     context = {
@@ -12,6 +13,7 @@ def personaTestView(request):
 def personaCreateView(request):
     context = {
         'llenado': False,
+        'contador': contador,
     }
     if request.method == 'POST':
         nombre = request.POST.get('q')
