@@ -10,10 +10,13 @@ def personaTestView(request):
     return render(request, 'personas/descripcion.html', context)
 
 def personaCreateView(request):
+    context = {
+        'llenado': False,
+    }
     if request.method == 'POST':
         nombre = request.POST.get('q')
         print(nombre)
-    context = {}
+        context['llenado'] = True
     return render(request, 'personas/personasCreate.html', context)
 
 def searchForHelp(request):

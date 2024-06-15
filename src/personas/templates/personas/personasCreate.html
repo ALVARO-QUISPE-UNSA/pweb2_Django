@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if llenado %}
+<span>Se llenó el formulario con exito</span>
+{% endif %}
 <form action="." method="POST"> {% csrf_token %}
   <input type="text" name="q" placeholder="buscar">
   <input type="submit" value="Buscar">
 </form>
+
 {% endblock %}
