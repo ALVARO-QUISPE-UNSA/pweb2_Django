@@ -16,6 +16,7 @@ def personaCreateView(request):
         'contador': contador,
     }
     if request.method == 'POST':
+        contador += 1
         nombre = request.POST.get('q')
         print(nombre)
         context['llenado'] = True
