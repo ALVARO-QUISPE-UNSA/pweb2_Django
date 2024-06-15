@@ -11,6 +11,7 @@ def personaTestView(request):
     return render(request, 'personas/descripcion.html', context)
 
 def personaCreateView(request):
+    global contador
     context = {
         'llenado': False,
         'contador': contador,
