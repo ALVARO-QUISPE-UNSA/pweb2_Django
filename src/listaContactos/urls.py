@@ -25,6 +25,7 @@ urlpatterns = [
     path('', myHomeView, name='Página de inicio'),
     path('another/', anotherView, name='otro'),
     path('persona/', personaTestView, name='otro'),
-    path('agregar/', personaCreateView, name='createPersona'),
+    path('add/', personaCreateView, name='createPersona'),
+    path('anotherAdd/', personaCreateView, name='createPersona'),
     path('search/', searchForHelp, name='buscar'),
 ]
