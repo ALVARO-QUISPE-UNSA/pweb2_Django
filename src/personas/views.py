@@ -52,3 +52,10 @@ def personasListView(request):
         'objectList': queryset,
     }
     return render(request, 'personas/personasLista.html', context)
+
+def personasShowObjects(request, myID):
+    obj = get_object_or_404(Persona, id=myID)
+    context = {
+        'objeto': obj,
+    }
+    return render(request, 'personas/descripcion.html', context)

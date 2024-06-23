@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.shortcuts import get_object_or_404, render
-from django.urls import path
+from django.urls import include, path
 
 from inicio.views import anotherView, myHomeView
 from personas.models import Persona
@@ -31,14 +31,10 @@ def personasShowObjects(request, myID):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('personas/', include('personas.urls')),
     path('', myHomeView, name='Página de inicio'),
     path('another/', anotherView, name='otro'),
     path('persona/', personaTestView, name='otro'),
-    path('add/', personaCreateView, name='createPersona'),
-    path('anotherAdd/', personasAnotherCreateView, name='OtroAgergarPersonas'),
     path('search/', searchForHelp, name='buscar'),
-    path('personas/<int:myID>/', personasShowObjects, name = 'browsing'),
-    path('personas/<int:myID>/', personasShowObjects, name = 'browsing'),
-    path('personas/', personasListView, name = 'listing'),
 ]
 
