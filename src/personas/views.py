@@ -16,7 +16,7 @@ class PersonaUpdateView(UpdateView):
         'edad',
         'donador',
     ]
-    template_name_suffix = '_form.html'
+    template_name_suffix = '_form'
 
 class PersonaCreateView(CreateView):
     model = Persona
