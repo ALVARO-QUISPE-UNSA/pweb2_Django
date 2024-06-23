@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block content %}
-<form action="." method="post"> {% csrf_token %}
+<form method="post"> {% csrf_token %}
   <h1>Quiere borrar esta persona?: </h1>
   <h2>{{ objeto.nombres }}</h2>
   <input type="submit" value="Sí :3">
