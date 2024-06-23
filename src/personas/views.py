@@ -14,7 +14,7 @@ from django.views.generic import (
 
 class PersonaQueryView(View):
     def get(self, request, *args, **kwargs):
-        queryset = Persona.objects.filter(edad_lte='40')
+        queryset = Persona.objects.filter(edad__lte='40')
         return JsonResponse(list(queryset.values()), safe=False)
 
 class PersonaDeleteView(DeleteView):
