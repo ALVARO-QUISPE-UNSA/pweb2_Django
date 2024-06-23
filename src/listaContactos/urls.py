@@ -20,7 +20,7 @@ from django.urls import path
 
 from inicio.views import anotherView, myHomeView
 from personas.models import Persona
-from personas.views import personaTestView, personaCreateView, personasAnotherCreateView, personasDeleteView, searchForHelp
+from personas.views import personaTestView, personaCreateView, personasAnotherCreateView, personasDeleteView, personasListView, searchForHelp
 
 def personasShowObjects(request, myID):
     obj = get_object_or_404(Persona, id=myID)
@@ -38,6 +38,7 @@ urlpatterns = [
     path('anotherAdd/', personasAnotherCreateView, name='OtroAgergarPersonas'),
     path('search/', searchForHelp, name='buscar'),
     path('personas/<int:myID>/', personasShowObjects, name = 'browsing'),
-    path('personas/<int:myID>/delete', personasDeleteView, name = 'deleting'),
+    path('personas/<int:myID>/', personasShowObjects, name = 'browsing'),
+    path('personas/', personasListView, name = 'listing'),
 ]
 
