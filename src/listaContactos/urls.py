@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.urls import path
 
 from inicio.views import anotherView, myHomeView
@@ -23,7 +23,7 @@ from personas.models import Persona
 from personas.views import personaTestView, personaCreateView, personasAnotherCreateView, searchForHelp
 
 def personasShowObjects(request, myID):
-    obj = Persona.objects.get(id=myID)
+    obj = get_object_or_404(Persona, id=myID)
     context = {
         'objeto': obj,
     }
