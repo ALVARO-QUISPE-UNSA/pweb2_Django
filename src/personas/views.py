@@ -5,7 +5,18 @@ from django.views.generic import (
     CreateView,
     ListView,
     DetailView,
+    UpdateView,
 )
+
+class PersonaUpdateView(UpdateView):
+    model = Persona
+    fields = [
+        'nombres',
+        'apellidos',
+        'edad',
+        'donador',
+    ]
+    template_name_suffix = '_form.html'
 
 class PersonaCreateView(CreateView):
     model = Persona
