@@ -13,5 +13,5 @@ urlpatterns = [
     path('<int:myID>/', personasShowObjects, name = 'browsing'),
     path('<int:myID>/delete', personasDeleteView, name = 'deleting'),
     path('oldList', personasListView, name = 'listing'),
-    path('', PersonaListView.as_view(), name = 'persona_list'),
+    path('', PersonaListView.as_view(), name = 'persona-list'),
 ]
