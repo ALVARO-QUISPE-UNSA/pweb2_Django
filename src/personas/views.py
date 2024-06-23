@@ -2,9 +2,19 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
 from django.views.generic import (
+    CreateView,
     ListView,
     DetailView,
 )
+
+class PersonaCreateView(CreateView):
+    model = Persona
+    fields = [
+        'nombres',
+        'apellidos',
+        'edad',
+        'donador',
+    ]
 
 class PersonaListView(ListView):
     model = Persona
