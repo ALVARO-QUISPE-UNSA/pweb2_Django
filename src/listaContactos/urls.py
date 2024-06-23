@@ -20,7 +20,7 @@ from django.urls import include, path
 
 from inicio.views import anotherView, myHomeView
 from personas.models import Persona
-from personas.views import personaTestView, personaCreateView, personasAnotherCreateView, personasDeleteView, personasListView, searchForHelp
+from personas.views import personaTestView, searchForHelp
 
 def personasShowObjects(request, myID):
     obj = get_object_or_404(Persona, id=myID)
