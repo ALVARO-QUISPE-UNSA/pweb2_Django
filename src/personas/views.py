@@ -44,4 +44,4 @@ def personasDeleteView(request, myID):
     context = {
         'objeto': obj,
     }
-    return render(request, 'persona/personasBorrar.html', context)
+    return render(request, 'personas/personasBorrar.html', context)
